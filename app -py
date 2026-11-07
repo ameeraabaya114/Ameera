@@ -1,0 +1,25 @@
+# Ameera - AI Agent for Abaya Shopping on WhatsApp
+# ONLY Abaya
+
+ABAYAS = {
+    "1": {"name": "Classic Black Abaya", "price": "N25,000", "sizes": "S, M, L, XL"},
+    "2": {"name": "Embroidered Luxury Abaya", "price": "N45,000", "sizes": "M, L, XL"},
+    "3": {"name": "Everyday Casual Abaya", "price": "N18,000", "sizes": "S, M, L"},
+}
+
+def ameera_reply(message):
+    msg = message.lower().strip()
+    if msg in ["hi", "hello", "salam"]:
+        return "Assalamu Alaikum! Welcome to Ameera. I am Ameera, your Abaya assistant. Type: 1 - See Abayas, 2 - Prices, 3 - How to Order, 4 - Talk to Human"
+    if msg == "1":
+        return "Our Abayas: 1. Classic Black - N25,000, 2. Luxury Embroidered - N45,000, 3. Casual Everyday - N18,000. Reply with number."
+    if msg == "2":
+        return "Prices: Classic N25,000, Luxury N45,000, Casual N18,000. Delivery in Abuja available."
+    if msg == "3":
+        return "To order: Tell me Abaya number, Size, Name + Address in Abuja."
+    if msg == "4":
+        return "A human will chat with you shortly. JazakAllah Khair."
+    return "I am Ameera. I help with Abayas only. Type Hi to start, or 1 to see Abayas."
+
+if __name__ == "__main__":
+    print("Ameera is ready - Abaya only")
